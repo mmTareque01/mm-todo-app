@@ -31,9 +31,9 @@ export default function TaskOverview({ setModal, data }) {
 
 
         <div>
-          <Button onClick={() => dispatch(deleteATask(task.id))} name="Delete" button={'delete'} />
-          <Button disabled={task.isCompleted} onClick={() => { dispatch(completeTask(task.id)) }} button={'complete'} />
-          <Button disabled={task.isCompleted} onClick={() => { dispatch(setActiveTask(task)); setModal(true, 'Update Task Details', 'update') }} name="Update" button={'updateIcon'} />
+          <Button title={"Delete"} onClick={() => dispatch(deleteATask(task.id))} name="Delete" button={'delete'} />
+          <Button title={"Complete"} disabled={task.isCompleted} onClick={() => { dispatch(completeTask(task.id)) }} button={'complete'} />
+          <Button title={"Update"} disabled={task.isCompleted} onClick={() => { dispatch(setActiveTask(task)); setModal(true, 'Update Task Details', 'update') }} name="Update" button={'updateIcon'} />
         </div>
 
 
