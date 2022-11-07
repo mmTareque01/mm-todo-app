@@ -1,12 +1,13 @@
 import ButtonType from '../utils/button'
 import ButtonStyle from '../utils/buttonStyle'
 
-export default function Button({ onClick, button, lg, disabled=false}) {
+export default function Button({ onClick, button, lg, disabled=false, title}) {
   return (
     <button
       onClick={onClick}
       type="button"
       disabled={disabled}
+      title={title}
       className={
         `rounded-lg
         border-b-2
